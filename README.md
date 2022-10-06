@@ -12,7 +12,7 @@
 
 ## Description
 
-I created this project to practice using JQUERY
+I created this project to practice using JQUERY, moment.js
 
 - What was your motivation?
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
