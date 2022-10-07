@@ -4,6 +4,9 @@
 // Need to display
 // Need another container that will hold the hours in rows 
     // The rows should be color coded to show past, present and future for the hours available
+        // past hours will be gray
+        // current hour will be red
+        // future hours will be green
     // each timeblock is a button that can click into the hour
     // once in each timeblock the user can input an event
     //the text input for each event should then be saved in local storage
