@@ -12,12 +12,7 @@
 
 ## Description
 
-I created this project to practice using JQUERY, moment.js
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+I created this project to practice using JQUERY, moment.js to work on an interactive calendar for the user to enter events. My motivation was to make an easy tool for an user to be able to tell the current hour, what is upcoming and an easy way for them to schedule events.
 
 ## Table of Contents (Optional)
 
