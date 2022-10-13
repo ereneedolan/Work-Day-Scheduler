@@ -16,19 +16,33 @@
 
 // DATA / STATE
 
-var saveBtn = document.getElementById("save-event");
+// var saveBtn = document.getElementById("save-event");
 
-var eventRows = $("<div>").addclass();
+var eventRows = $("<div>").addclass(
+);
 
-var listedHours = $("<div>").addclass().text();
+// var listedHours = $("<div>").addclass().text();
 
 // FUNCTIONS
+
+function hoursUpdate(){
+    var currentHour = moment().hours();
+    console.log(currentHour)
+    $('.time-block').each(function(){
+       addclass( //if 9AM < currentHour
+        //then add class past
+        //if = remove class past and add class present
+        //else = remove class present and past add class future
+            );
+    })
+}
+hoursUpdate()
 
 
 //need to use military time so the computer can differentiate AM and PM
 //business hours 9am- 5pm use military time of 9 - 18(5pm plus one for index)
 
-for(i=9 i<18 i++)
+for(i=9; i<18; i++)
 
 if(i<12){
     hourDisplay = i + "AM";
@@ -39,7 +53,7 @@ if(i<12){
 
 
 //floppy-disc button formation
-var icon = $("<i>").addclass("fas fa-save")
+// var icon = $("<i>").addclass("fas fa-save")
 
 // can in one statement compound the appends to have all stuff created added to a container at once
 
