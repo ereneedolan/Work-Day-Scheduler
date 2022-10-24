@@ -12,14 +12,35 @@
     //the text input for each event should then be saved in local storage
 // save button is a button showing a floppy disk that will save the information entered by the user
     // the button will be at the end of each row 
-    
+
+$( document ).ready(function() {
+    var saveBtn = $(".saveBtn");
+    saveBtn.click(function() {
+        var time = $(this).parent().attr("id")
+        console.log(time);
+        var description = $(this).siblings(".description").val();
+        console.log(description)
+        localStorage.setItem(time, description);
+        
+      });
+
+      $("#9am .description").val(localStorage.getItem("9am"));
+      $("#10am .description").val(localStorage.getItem("10am"));
+      $("#11am .description").val(localStorage.getItem("11am"));
+      $("#12pm .description").val(localStorage.getItem("12pm"));
+      $("#1pmm .description").val(localStorage.getItem("1pmm"));
+      $("#2pm .description").val(localStorage.getItem("2pmm"));
+      $("#3pm .description").val(localStorage.getItem("3pm"));
+      $("#4pm .description").val(localStorage.getItem("4pm"));
+      $("#5pm .description").val(localStorage.getItem("5pm"));
+      
+
 
 // DATA / STATE
 
 // var saveBtn = document.getElementById("save-event");
 
-var eventRows = $("<div>").addclass(
-);
+// var eventRows = $("<div>").addclass();
 
 // var listedHours = $("<div>").addclass().text();
 
@@ -29,11 +50,12 @@ function hoursUpdate(){
     var currentHour = moment().hours();
     console.log(currentHour)
     $('.time-block').each(function(){
-       addclass( //if 9AM < currentHour
+        
+    //    addclass( //if 9AM < currentHour
         //then add class past
         //if = remove class past and add class present
         //else = remove class present and past add class future
-            );
+            // );
     })
 }
 hoursUpdate()
@@ -50,6 +72,8 @@ if(i<12){
     hourDisplay = i + "PM"
 }
 
+
+});  
 
 
 //floppy-disc button formation
