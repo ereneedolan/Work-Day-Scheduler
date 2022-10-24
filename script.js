@@ -48,6 +48,8 @@ function hoursUpdate(){
     var currentHour = moment().hours();
     console.log(currentHour)
     $('.time-block').each(function(){
+
+        $(this).addClass('d-none')
          if ($("#9am .description") < currentHour){
           $("#9am .description").addClass("past")
         }
