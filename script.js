@@ -39,9 +39,7 @@ $( document ).ready(function() {
 // DATA / STATE
 
 // var saveBtn = document.getElementById("save-event");
-
 // var eventRows = $("<div>").addclass();
-
 // var listedHours = $("<div>").addclass().text();
 
 // FUNCTIONS
@@ -50,7 +48,9 @@ function hoursUpdate(){
     var currentHour = moment().hours();
     console.log(currentHour)
     $('.time-block').each(function(){
-        
+         if ($("#9am .description") < currentHour){
+          $("#9am .description").addClass("past")
+        }
     //    addclass( //if 9AM < currentHour
         //then add class past
         //if = remove class past and add class present
@@ -59,7 +59,6 @@ function hoursUpdate(){
     })
 }
 hoursUpdate()
-
 
 //need to use military time so the computer can differentiate AM and PM
 //business hours 9am- 5pm use military time of 9 - 18(5pm plus one for index)
@@ -74,7 +73,6 @@ if(i<12){
 
 
 });  
-
 
 //floppy-disc button formation
 // var icon = $("<i>").addclass("fas fa-save")
