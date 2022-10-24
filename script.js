@@ -49,10 +49,12 @@ function hoursUpdate(){
     console.log(currentHour)
     $('.time-block').each(function(){
 
-        $(this).addClass('d-none')
-         if ($("#9am .description") < currentHour){
-          $("#9am .description").addClass("past")
-        }
+        // $(this).addClass('past')
+        // $(this).addClass('present')
+         // $(this).addClass('future')
+        //  if ($("#9am .description") < currentHour){
+        //   $("#9am .description").addClass("past")
+        // }
     //    addclass( //if 9AM < currentHour
         //then add class past
         //if = remove class past and add class present
