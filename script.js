@@ -1,5 +1,4 @@
 
-
 // DEPENDENCIES (DOM ELEMENTS)
 // Need to display
 // Need another container that will hold the hours in rows 
@@ -24,17 +23,16 @@ $( document ).ready(function() {
         
       });
 
-      $("#9am .description").val(localStorage.getItem("9am"));
-      $("#10am .description").val(localStorage.getItem("10am"));
-      $("#11am .description").val(localStorage.getItem("11am"));
-      $("#12pm .description").val(localStorage.getItem("12pm"));
-      $("#1pmm .description").val(localStorage.getItem("1pmm"));
-      $("#2pm .description").val(localStorage.getItem("2pmm"));
-      $("#3pm .description").val(localStorage.getItem("3pm"));
-      $("#4pm .description").val(localStorage.getItem("4pm"));
-      $("#5pm .description").val(localStorage.getItem("5pm"));
+      $("#9 .description").val(localStorage.getItem("9am"));
+      $("#10 .description").val(localStorage.getItem("10am"));
+      $("#11 .description").val(localStorage.getItem("11am"));
+      $("#12 .description").val(localStorage.getItem("12pm"));
+      $("#13 .description").val(localStorage.getItem("1pm"));
+      $("#14 .description").val(localStorage.getItem("2pm"));
+      $("#15 .description").val(localStorage.getItem("3pm"));
+      $("#16 .description").val(localStorage.getItem("4pm"));
+      $("#17 .description").val(localStorage.getItem("5pm"));
       
-
 
 // DATA / STATE
 
@@ -48,18 +46,17 @@ function hoursUpdate(){
     var currentHour = moment().hours();
     console.log(currentHour)
     $('.time-block').each(function(){
-
-        // $(this).addClass('past')
-        // $(this).addClass('present')
-         // $(this).addClass('future')
-        //  if ($("#9am .description") < currentHour){
-        //   $("#9am .description").addClass("past")
-        // }
-    //    addclass( //if 9AM < currentHour
-        //then add class past
-        //if = remove class past and add class present
-        //else = remove class present and past add class future
-            // );
+    const timeBlockHour = parseInt($(this).attr("id"))
+    const difference = timeBlockHour - currentHour
+    if(difference< 0){
+        $(this).addClass('past')
+    } 
+    else if (difference > 0){
+        $(this).addClass('future')
+    }
+    else{
+        $(this).addClass('present')
+    }
     })
 }
 hoursUpdate()
@@ -67,16 +64,16 @@ hoursUpdate()
 //need to use military time so the computer can differentiate AM and PM
 //business hours 9am- 5pm use military time of 9 - 18(5pm plus one for index)
 
-for(i=9; i<18; i++)
+// for(i=9; i<18; i++)
 
-if(i<12){
-    hourDisplay = i + "AM";
-} else if (i===12){
-    hourDisplay = i + "PM"
-}
+// if(i<12){
+//     hourDisplay = i + "AM";
+// } else if (i===12){
+//     hourDisplay = i + "PM"
+// }
 
 
-});  
+ });  
 
 //floppy-disc button formation
 // var icon = $("<i>").addclass("fas fa-save")
