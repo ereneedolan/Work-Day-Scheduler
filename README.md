@@ -6,7 +6,7 @@
   
 ## Screenshot
 
-![Image Here]()
+![Image Here](https://github.com/ereneedolan/Work-Day-Scheduler/blob/main/Images/Screen%20Shot%202022-10-29%20at%206.02.15%20PM.png?raw=true)
 
 ![Image Here]()
 
