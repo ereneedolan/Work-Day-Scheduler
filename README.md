@@ -4,14 +4,11 @@
   
 [Deployed Site Here](https://ereneedolan.github.io/Work-Day-Scheduler/)
   
-
-
 ## Screenshot
 
 ![Image Here]()
 
 ![Image Here]()
-
 
 
 ## Description
